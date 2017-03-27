@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <transparentPAC>
   <listenPorts>
-    <listenPort>3128</listenPort>
-    <listenPort>8080</listenPort>
+    <listenPort port="3128" transparent="no">Standard Squid Port</listenPort>
+    <listenPort port="8080" transparent="no">Standard Proxy Port</listenPort>
   </listenPorts>
   <localNetworks>
     <localNetwork name="dmznet" src="192.168.201.0/24">DMZ Network</localNetwork>  
-    <localNetwork name="remotenet">10.150.0.0/16</localNetwork>    
-    <localNetwork name="dublinnet">10.200.0.0/16</localNetwork>    
-    <localNetwork name="trimnet">10.201.0.0/16</localNetwork>    
-    <localNetwork name="apnnet">10.230.0.0/16</localNetwork>    
-    <localNetwork name="oldnet">19.200.0.0/16</localNetwork>    
+    <localNetwork name="remotenet" src="10.150.0.0/16">Remote Sites</localNetwork>    
+    <localNetwork name="dublinnet" src="10.200.0.0/16">Stephen's Green</localNetwork>    
+    <localNetwork name="trimnet" src="10.201.0.0/16">Trim HQ</localNetwork>    
+    <localNetwork name="apnnet" src="10.230.0.0/16">APN Devices</localNetwork>    
+    <localNetwork name="oldnet" src="19.200.0.0/16">Old LAN</localNetwork>    
   </localNetworks>
   <remotePorts>
     <remotePort type="http" port="21">Standard FTP Port</remotePort>
