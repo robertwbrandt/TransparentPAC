@@ -12,13 +12,30 @@
     <localNetwork name="apnnet" src="10.230.0.0/16">APN Devices</localNetwork>    
     <localNetwork name="oldnet" src="19.200.0.0/16">Old LAN</localNetwork>    
   </localNetworks>
-  <remotePorts>
-    <remotePort type="http" port="21">Standard FTP Port</remotePort>
-    <remotePort type="http" port="70">Standard Gopher Port</remotePort>
-    <remotePort type="http" port="80">Standard Web Port</remotePort>
-    <remotePort type="http" port="210">Standard Wais Port</remotePort>
-    <remotePort type="http" port="280">Standard Web Mgmt Port</remotePort>
-    <remotePort type="http" port="80">Standard Web Port</remotePort>
-    <remotePort type="http" port="80">Standard Web Port</remotePort>
-  <remotePorts>
+
+  
+  
+dstdomain
+src
+browser
+localport
+  
+http://www.squid-cache.org/Doc/config/acl/
+Fast ACLs include (as of squid 3.1.0.7):
+
+    all (built-in)
+    src
+    dstdomain
+    browser
+    localport  
+    dstdom_regex
+    arp
+    peername
+    time
+    url_regex
+    urlpath_regex
+    method
+    req_header
+
+  
 </transparentPAC>
