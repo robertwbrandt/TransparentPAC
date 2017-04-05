@@ -1,41 +1,39 @@
 <?xml version="1.0"?>
 <transparentPAC>
-  <listenPorts>
-    <listenPort port="3128" transparent="no">Standard Squid Port</listenPort>
-    <listenPort port="8080" transparent="no">Standard Proxy Port</listenPort>
-  </listenPorts>
   <localNetworks>
-    <localNetwork name="dmznet" src="192.168.201.0/24">DMZ Network</localNetwork>  
-    <localNetwork name="remotenet" src="10.150.0.0/16">Remote Sites</localNetwork>    
-    <localNetwork name="dublinnet" src="10.200.0.0/16">Stephen's Green</localNetwork>    
-    <localNetwork name="trimnet" src="10.201.0.0/16">Trim HQ</localNetwork>    
-    <localNetwork name="apnnet" src="10.230.0.0/16">APN Devices</localNetwork>    
-    <localNetwork name="oldnet" src="19.200.0.0/16">Old LAN</localNetwork>    
+    <localNetwork name="dmz" src="192.168.201.0/24">DMZ Network</localNetwork>  
+    <localNetwork name="remote" src="10.150.0.0/16">Remote Sites</localNetwork>    
+    <localNetwork name="sg200" src="10.200.0.0/16">Stephen's Green</localNetwork>    
+    <localNetwork name="tm201" src="10.201.0.0/16">Trim HQ</localNetwork>    
+    <localNetwork name="apn" src="10.230.0.0/16">APN Devices</localNetwork>    
+    <localNetwork name="old" src="19.200.0.0/16">Old LAN</localNetwork>    
   </localNetworks>
+  <rules>
+    <rule name="local">
+      <src></src>
+      <src></src>
+      <src></src>
+      <dst></dst>
+      <dst></dst>
+      <dst></dst>
+      <action></action>
+    </rule>
+  </rules>
 
-  
-  
-dstdomain
-src
-browser
-localport
-  
-http://www.squid-cache.org/Doc/config/acl/
-Fast ACLs include (as of squid 3.1.0.7):
+<!--
+    <src type="browser" case-sensitive="NO|yes" value="">Description</src>
+    <src type="localport" value="">Description</src>
+    <src type="method" value="">Description</src>
+    <src type="peername" value="">Description</src>
+    <src type="req_header" case-sensitive="NO|yes" value="">Description</src>
+    <src type="src" dns-lookup="NO|yes" value="">Description</src>
+    <src type="time" value="">Description</src>
 
-    all (built-in)
-    src
-    dstdomain
-    browser
-    localport  
-    dstdom_regex
-    arp
-    peername
-    time
-    url_regex
-    urlpath_regex
-    method
-    req_header
-
+    <dst type="dst" dns-lookup="NO|yes" value="">Description</dst>
+    <dst type="dstdom_regex" case-sensitive="NO|yes" value="">Description</dst>
+    <dst type="dstdomain" case-sensitive="NO|yes" value="">Description</dst>
+    <dst type="url_regex" case-sensitive="NO|yes" value="">Description</dst>
+    <dst type="urlpath_regex" case-sensitive="NO|yes" value="">Description</dst>
+-->
   
 </transparentPAC>
