@@ -21,6 +21,8 @@
   </rules>
 
 <!--
+    <src type="all" value="ACL">Description</src>
+    <src type="any" value="ACL">Description</src>
     <src type="browser" case-sensitive="NO|yes" value="">Description</src>
     <src type="localport" value="">Description</src>
     <src type="method" value="">Description</src>
