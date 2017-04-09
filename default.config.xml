@@ -21,21 +21,27 @@
   </rules>
 
 <!--
-    <src type="all" value="ACL">Description</src>
-    <src type="any" value="ACL">Description</src>
-    <src type="browser" case-sensitive="NO|yes" value="">Description</src>
-    <src type="localport" value="">Description</src>
-    <src type="method" value="">Description</src>
-    <src type="peername" value="">Description</src>
-    <src type="req_header" case-sensitive="NO|yes" value="">Description</src>
-    <src type="src" dns-lookup="NO|yes" value="">Description</src>
-    <src type="time" value="">Description</src>
+  <rules>
+    <rule name="NAME" expire="2002-05-30T09:00:00" action="NONE|whitelist|blacklist">
+      <src type="acl" value="ACL">Description</src>
+      <src type="browser" case-sensitive="NO|yes" value="">Description</src>
+      <src type="localport" value="">Description</src>
+      <src type="method" value="">Description</src>
+      <src type="peername" value="">Description</src>
+      <src type="req_header" case-sensitive="NO|yes" value="">Description</src>
+      <src type="src" dns-lookup="NO|yes" value="">Description</src>
+      <src type="time" value="">Description</src>
+      
+      <dst type="dst" dns-lookup="NO|yes" value="">Description</dst>
+      <dst type="dstdom_regex" case-sensitive="NO|yes" value="">Description</dst>
+      <dst type="dstdomain" case-sensitive="NO|yes" value="">Description</dst>
+      <dst type="url_regex" case-sensitive="NO|yes" value="">Description</dst>
+      <dst type="urlpath_regex" case-sensitive="NO|yes" value="">Description</dst>
 
-    <dst type="dst" dns-lookup="NO|yes" value="">Description</dst>
-    <dst type="dstdom_regex" case-sensitive="NO|yes" value="">Description</dst>
-    <dst type="dstdomain" case-sensitive="NO|yes" value="">Description</dst>
-    <dst type="url_regex" case-sensitive="NO|yes" value="">Description</dst>
-    <dst type="urlpath_regex" case-sensitive="NO|yes" value="">Description</dst>
+      <log location="MODULE:PLACE" options="OPTIONS">FORMAT</log>
+    </rule>
+  </rules>
+  <log location="MODULE:PLACE" options="OPTIONS">FORMAT</log>
 -->
   
 </transparentPAC>
